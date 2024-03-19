@@ -6,7 +6,15 @@ vinicius.health = 13;
 vinicius.magic = 7;
 vinicius.level = 1;
 vinicius.job = 'Archer';
-vinicius.type = 'Neutral';
-vinicius.description = 'A young archer seeking to become one of the best!';
+vinicius.type = 'Wind';
 
-console.log(vinicius);
+const gabriel = new Character();
+gabriel.name = 'Gabriel';
+gabriel.health = 17;
+gabriel.magic = 5;
+gabriel.level = 1;
+gabriel.job = 'Thief';
+gabriel.type = 'Dark';
+
+console.log('Insignia de ' + vinicius.name + ': ' + vinicius.obtainBadge());
+console.log('Insignia de ' + gabriel.name + ': ' + gabriel.obtainBadge());

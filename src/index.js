@@ -1,16 +1,12 @@
-const personagemPedrinho = {
-    nome: 'Pedrinho',
-    vida: 7,
-    mana: 12,
-    level: 5,
-    tipo: 'Mago',
-}
+import { Character } from "./modules/character.js";
 
-const personagemJose = {
-    nome: 'Jose',
-    vida: 7,
-    mana: 6,
-    level: 3,
-    tipo: 'Arqueiro',
-}
+const vinicius = new Character();
+vinicius.name = 'Vinicius';
+vinicius.health = 13;
+vinicius.magic = 7;
+vinicius.level = 1;
+vinicius.job = 'Archer';
+vinicius.type = 'Neutral';
+vinicius.description = 'A young archer seeking to become one of the best!';
 
+console.log(vinicius);

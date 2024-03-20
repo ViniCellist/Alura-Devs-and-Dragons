@@ -48,13 +48,13 @@ header {
     max-width: 1357px;
 }
 
-.personagem {
+.char {
     width: 252.18px;
     cursor: pointer;
     transition: all 0.3s;
 }
 
-.personagem.selecionado {
+.char.selecionado {
     transform: translateY(-1.25rem);
 }
 

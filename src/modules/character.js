@@ -4,19 +4,21 @@ export class Character {
     magic;
     level;
     job;
-    type;
+    description;
 
-    constructor(name, level, type) {
+    constructor(name, level, job, health, magic) {
         this.name = name;
         this.level = level;
-        this.type = type;
+        this.job = job;
+        this.health = health;
+        this.magic = magic;
     }
 
     obtainBadge() {
         if (this.level >= 5) {
-            return `Legendary ${this.type}`;
+            return `Legendary ${this.job}`;
         }
-        return `${this.type} Rookie`;
+        return `${this.job} Rookie`;
     };
 };
 

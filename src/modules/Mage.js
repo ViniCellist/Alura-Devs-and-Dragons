@@ -12,6 +12,13 @@ export class Mage extends Character{
         this.intelligence = intelligence;
         this.powerLevel = powerLevel;
     };
+
+    obtainBadge() {
+        if(this.powerLevel >= 5 && this.intelligence >= 5) {
+            return `Master of ${this.element}`;
+        };
+        return super.obtainBadge();
+    };
 };
 
 /*

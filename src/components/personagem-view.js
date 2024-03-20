@@ -1,27 +1,27 @@
 export class CharacterView {
 
-    personagem
+    chars;
 
-    constructor(personagens) {
+    constructor(chars) {
         this.ulPersonagens = document.querySelector('ul#personagens');
-        this.personagens = personagens
+        this.chars = chars;
     };
 
     render() {
-        this.ulPersonagens.innerHTML = ''
-        this.personagens.forEach(personagem => {
-            const personagemLI = this.criaPersonagem(personagem)
-            this.ulPersonagens.appendChild(personagemLI)
-        })
-    }
+        this.ulPersonagens.innerHTML = '';
+        this.chars.forEach(char => {
+            const personagemLI = this.criaPersonagem(char);
+            this.ulPersonagens.appendChild(personagemLI);
+        });
+    };
     
-    criaPersonagem = (personagem) => {
-        const personagemLI = document.createElement('li')
-        personagemLI.classList.add('personagem'. personagem.tipo)
+    criaPersonagem = (char) => {
+        const personagemLI = document.createElement('li');
+        personagemLI.classList.add('char', char.type);
     
-        //const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array
+        //const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array;
     
-        //if (estaSelecionado) personagemLI.classList.add('selecionado')
+        //if (estaSelecionado) personagemLI.classList.add('selecionado');
     
         personagemLI.innerHTML =
     
@@ -31,18 +31,18 @@ export class CharacterView {
                 <div class="combate"></div>
                 <div class="level">
                     <button class="diminuir-level">-</button>
-                    <p class="level-texto">Level ${personagem.level}</p>
+                    <p class="level-texto">Level ${char.level}</p>
                     <button class="aumentar-level">+</button>
                 </div>
             </div>
             <div class="container-imagem">
                 <div class="imagem"></div>
                 <div class="container-tipo">
-                    <h2 class="tipo">${personagem.tipo}</h2>
+                    <h2 class="tipo">${char.type}</h2>
                 </div>
             </div>
             <div class="container-nome">
-                <h3 class="nome">${personagem.nome}</h3>
+                <h3 class="nome">${char.name}</h3>
             </div>
             <div class="container-descricao">
                 <p class="descricao"></p>
@@ -50,12 +50,12 @@ export class CharacterView {
         </div>
         <div class="container-inferior">
             <img src="./src/assets/img/icone-mana.png" class="icone-mana">
-            <p class="insignia">${personagem.obtainBadge()}</p>
+            <p class="insignia">${char.obtainBadge()}</p>
             <img src="./src/assets/img/icone-vida.png" class="icone-vida">
             <h4 class="mana"></h4>
             <h4 class="vida"></h4>
         </div>
-        `
+        `;
     
         /*const containerLevel = personagemLI.querySelector('.level')
         containerLevel.onclick = (evt) => {
@@ -80,8 +80,8 @@ export class CharacterView {
             }
         }*/
     
-        return personagemLI
-    }
+        return personagemLI;
+    };
     
     
     /*adicionaSelecao = (personagem) => {
@@ -111,5 +111,5 @@ export class CharacterView {
             this.render()
         })
     }*/
-}
+};
 

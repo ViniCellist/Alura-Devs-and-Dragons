@@ -219,94 +219,94 @@ header {
 
 }
 
-/*Mago*/
+/*Mage*/
 
-.Mago .container-superior {
+.Mage .container-superior {
     background-image: url(../img/fundo-carta-verde.png);
 }
 
-.Mago .container-inferior {
+.Mage .container-inferior {
     background-image: url(../img/retangulo-verde.png);
 }
 
-.Mago .combate {
+.Mage .combate {
     background-image: url(../img/combate-mago.png);
 }
 
-.Mago .level-texto {
+.Mage .level-texto {
     background: radial-gradient(#1F270A, #66A002);
 }
 
-.Mago .imagem {
+.Mage .imagem {
     background-image: url(../img/mago.png);
     background-repeat: no-repeat;
 }
 
-/*Arqueiro*/
+/*Archer*/
 
-.Arqueiro .container-superior {
+.Archer .container-superior {
     background-image: url(../img/fundo-carta-azul.png);
 }
 
-.Arqueiro .container-inferior {
+.Archer .container-inferior {
     background-image: url(../img/retangulo-azul.png);
 }
 
-.Arqueiro .combate {
+.Archer .combate {
     background-image: url(../img/combate-arqueiro.png);
 }
 
-.Arqueiro .level-texto {
+.Archer .level-texto {
     background: radial-gradient(#072041, #145BAB);
 }
 
-.Arqueiro .imagem {
+.Archer .imagem {
     background-image: url(../img/arqueiro.png);
     background-repeat: no-repeat;
 }
 
-/*Guerreiro*/
+/*Warrior*/
 
-.Guerreiro .container-superior {
+.Warrior .container-superior {
     background-image: url(../img/fundo-carta-vermelha.png);
 }
 
-.Guerreiro .container-inferior {
+.Warrior .container-inferior {
     background-image: url(../img/retangulo-vermelho.png);
 }
 
-.Guerreiro .combate {
+.Warrior .combate {
     background-image: url(../img/combate-guerreiro.png);
 }
 
-.Guerreiro .level-texto {
+.Warrior .level-texto {
     background: radial-gradient(#56272D, #C1272D);
 }
 
-.Guerreiro .imagem {
+.Warrior .imagem {
     background-image: url(../img/guerreiro.png);
     background-repeat: no-repeat;
 }
 
-/*ArqueiroMago*/
+/*ArcaneArcher*/
 
-.ArqueiroMago .container-superior {
+.ArcaneArcher .container-superior {
     background-image: url(../img/fundo-carta-roxa.png);
 }
 
-.ArqueiroMago .container-inferior {
+.ArcaneArcher .container-inferior {
     background-image: url(../img/retangulo-roxo.png);
 }
 
-.ArqueiroMago .combate {
+.ArcaneArcher .combate {
     background-image: url(../img/combate-arqueiro-Mago.png);
 }
 
-.ArqueiroMago .level-texto {
+.ArcaneArcher .level-texto {
     background: radial-gradient(#3D003F, #93278F);
 }
 
-.ArqueiroMago .imagem {
+.ArcaneArcher .imagem {
     background-image: url(../img/arqueiro-mago.png);
     background-repeat: no-repeat;
 }

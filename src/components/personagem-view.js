@@ -52,8 +52,8 @@ export class CharacterView {
             <img src="./src/assets/img/icone-mana.png" class="icone-mana">
             <p class="insignia">${char.obtainBadge()}</p>
             <img src="./src/assets/img/icone-vida.png" class="icone-vida">
-            <h4 class="mana">${char.magic}</h4>
-            <h4 class="vida">${char.health}</h4>
+            <h4 class="mana">${char.mp}</h4>
+            <h4 class="vida">${char.hp}</h4>
         </div>
         `;
     

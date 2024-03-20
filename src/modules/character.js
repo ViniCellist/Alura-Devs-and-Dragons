@@ -6,12 +6,9 @@ export class Character {
     job;
     type;
 
-    constructor(name, health, magic, level, job, type) {
+    constructor(name, level, type) {
         this.name = name;
-        this.health = health;
-        this.magic = magic;
         this.level = level;
-        this.job = job
         this.type = type;
     }
 
@@ -22,3 +19,11 @@ export class Character {
         return `${this.type} Rookie`;
     };
 };
+
+/*
+Jobs:
+Mage
+Archer
+Warrior
+ArcaneArcher
+*/

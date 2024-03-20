@@ -1,17 +1,15 @@
 export class Character {
     name;
-    health;
-    magic;
+    hp;
+    mp;
     level;
-    job;
     description;
 
-    constructor(name, level, job, health, magic) {
+    constructor(name, level, hp, mp) {
         this.name = name;
         this.level = level;
-        this.job = job;
-        this.health = health;
-        this.magic = magic;
+        this.hp = hp;
+        this.mp = mp;
     }
 
     obtainBadge() {

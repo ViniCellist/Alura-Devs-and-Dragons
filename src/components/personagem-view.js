@@ -1,10 +1,16 @@
+import { Character } from "../modules/character.js";
+import { mostrarModal } from "./modal.js";
+
 export class CharacterView {
 
     chars;
+    selectedChars;
 
     constructor(chars) {
         this.ulPersonagens = document.querySelector('ul#personagens');
         this.chars = chars;
+        this.selectedChars = [];
+        this.duel();
     };
 
     render() {
@@ -19,9 +25,9 @@ export class CharacterView {
         const personagemLI = document.createElement('li');
         personagemLI.classList.add('char', char.constructor.job);
     
-        //const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array;
+        const estaSelecionado = this.selectedChars.indexOf(char) !== -1;
     
-        //if (estaSelecionado) personagemLI.classList.add('selecionado');
+        if (estaSelecionado) personagemLI.classList.add('selecionado');
     
         personagemLI.innerHTML =
     
@@ -69,47 +75,47 @@ export class CharacterView {
         }*/
     
     
-        /*personagemLI.onclick = () => {
-            const jaTem2Selecionados = this.personagensSelecionados.length === 2
+        personagemLI.onclick = () => {
+            const jaTem2Selecionados = this.selectedChars.length === 2;
             if (!jaTem2Selecionados || estaSelecionado) {
-                personagemLI.classList.toggle('selecionado')
+                personagemLI.classList.toggle('selecionado');
     
-                if (!estaSelecionado) return this.adicionaSelecao(personagem)
+                if (!estaSelecionado) return this.adicionaSelecao(char);
     
-                this.removeSelecao(personagem)
-            }
-        }*/
+                this.removeSelecao(char);
+            };
+        };
     
         return personagemLI;
     };
     
     
-    /*adicionaSelecao = (personagem) => {
-        this.personagensSelecionados.push(personagem)
-        this.render()
-    }
+    adicionaSelecao = (char) => {
+        this.selectedChars.push(char);
+        this.render();
+    };
     
     
-    removeSelecao = (personagem) => {
-        const indexDoPersonagemNoArray = this.personagensSelecionados.indexOf(personagem)
-        this.personagensSelecionados.splice(indexDoPersonagemNoArray, 1)
-        this.render()
-    }
+    removeSelecao = (char) => {
+        const indexDoPersonagemNoArray = this.selectedChars.indexOf(char);
+        this.selectedChars.splice(indexDoPersonagemNoArray, 1);
+        this.render();
+    };
     
-    escutarEventoDuelo() {
-        const botaoDuelar = document.querySelector('.botao-duelar')
+    duel() {
+        const botaoDuelar = document.querySelector('.botao-duelar');
     
         botaoDuelar.addEventListener('click', () => {
-            if (this.personagensSelecionados.length < 2) return mostrarModal('Selecione 2 personagens')
+            if (this.selectedChars.length < 2) return mostrarModal('Selecione 2 personagens');
     
-            const resultadoDuelo = Personagem.verificarVencedor(this.personagensSelecionados[0], this.personagensSelecionados[1])
+            const resultadoDuelo = Character.verifyWinner(this.selectedChars[0], this.selectedChars[1]);
     
-            mostrarModal(resultadoDuelo)
+            mostrarModal(resultadoDuelo);
     
-            this.personagensSelecionados.splice(0, this.personagensSelecionados.length)
+            this.selectedChars.splice(0, this.selectedChars.length);
     
-            this.render()
-        })
-    }*/
+            this.render();
+        });
+    };
 };
 

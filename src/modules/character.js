@@ -17,6 +17,20 @@ export class Character {
         }
         return `${this.constructor.job} Rookie`;
     };
+
+    static verifyWinner(personagem1, personagem2) {
+        if(personagem1.level === personagem2.level) {
+            return `Empate`;
+        };
+
+        if(personagem1.level > personagem2.level) {
+            return `${personagem1.constructor.job} ${personagem1.name} é o vencedor!`;
+        };
+
+        return `${personagem2.constructor.job} ${personagem2.name} é o vencedor!`;
+
+        
+    }
 };
 
 /*

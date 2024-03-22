@@ -13,3 +13,5 @@ const p4 = new Warrior('Alfarr', 12, 37, 12, 20, 21);
 const chars = [p1, p2, p3, p4];
 
 new CharacterView(chars).render();
+
+console.log(Character.verifyWinner(p1, p2))

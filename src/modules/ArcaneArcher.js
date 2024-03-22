@@ -5,7 +5,8 @@ import { Mage } from "./Mage.js";
 export class ArcaneArcher extends Character {
     sideA;
     sideM;
-    job = "ArcaneArcher"
+    static job = "ArcaneArcher";
+    static description = "Detentor de lanças e flechas mágicas!";
 
     constructor(name, level, hp, mp, dextery, agility, element, powerLevel, intelligence) {
         super(name, level, hp, mp)

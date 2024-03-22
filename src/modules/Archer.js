@@ -1,7 +1,8 @@
 import { Character } from "./character.js";
 
 export class Archer extends Character {
-    job = "Archer";
+    static job = "Archer";
+    static description = "Você tem o meu arco!"
     dextery;
     agility;
 
@@ -9,7 +10,6 @@ export class Archer extends Character {
         super(name, level, hp, mp);
         this.dextery = dextery;
         this.agility = agility;
-
     };
 
     obtainBadge() {

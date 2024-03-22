@@ -1,7 +1,8 @@
 import { Character } from "./character.js";
 
 export class Warrior extends Character {
-    job = "Warrior";
+    static job = "Warrior";
+    static description = "Pela honra do Rei!";
     strengh;
     defense;
 

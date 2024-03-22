@@ -17,7 +17,7 @@ export class CharacterView {
     
     criaPersonagem = (char) => {
         const personagemLI = document.createElement('li');
-        personagemLI.classList.add('char', char.job);
+        personagemLI.classList.add('char', char.constructor.job);
     
         //const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array;
     
@@ -38,14 +38,14 @@ export class CharacterView {
             <div class="container-imagem">
                 <div class="imagem"></div>
                 <div class="container-tipo">
-                    <h2 class="tipo">${char.job}</h2>
+                    <h2 class="tipo">${char.constructor.job}</h2>
                 </div>
             </div>
             <div class="container-nome">
                 <h3 class="nome">${char.name}</h3>
             </div>
             <div class="container-descricao">
-                <p class="descricao"></p>
+                <p class="descricao">${char.constructor.description}</p>
             </div>
         </div>
         <div class="container-inferior">

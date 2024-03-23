@@ -6,8 +6,8 @@ export class Archer extends Character {
     dextery;
     agility;
 
-    constructor(name, level, hp, mp, dextery, agility) {
-        super(name, level, hp, mp);
+    constructor(name, dextery, agility) {
+        super(name);
         this.dextery = dextery;
         this.agility = agility;
     };

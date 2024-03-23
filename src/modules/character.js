@@ -2,20 +2,38 @@ export class Character {
     name;
     hp;
     mp;
-    level;
+    #level;
 
-    constructor(name, level, hp, mp) {
+    constructor(name) {
         this.name = name;
-        this.level = level;
-        this.hp = hp;
-        this.mp = mp; 
+        this.#level = 1;
+        this.hp = 5;
+        this.mp = 5; 
     }
 
+    aumentarLevel() {
+        this.level += 1;
+    };
+
+    diminuirLevel() {
+        this.level -= 1;
+    };
+
     obtainBadge() {
-        if (this.level >= 5) {
+        if (this.#level >= 5) {
             return `Legendary ${this.constructor.job}`;
         }
         return `${this.constructor.job} Rookie`;
+    };
+
+    get level() {
+        return this.#level;
+    };
+
+    set level(newLevel) {
+        if (newLevel >= 1 && newLevel <= 10) {
+            this.#level = newLevel;
+        };
     };
 
     static verifyWinner(personagem1, personagem2) {

@@ -7,8 +7,8 @@ export class Mage extends Character{
     static job = 'Mage';
     static description = "O mago é implacável!";
 
-    constructor(name, level, hp, mp, element, intelligence, powerLevel) {
-        super(name, level, hp, mp)
+    constructor(name, element, intelligence, powerLevel) {
+        super(name)
         this.element = element;
         this.intelligence = intelligence;
         this.powerLevel = powerLevel;

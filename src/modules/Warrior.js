@@ -6,8 +6,8 @@ export class Warrior extends Character {
     strengh;
     defense;
 
-    constructor(name, level, hp, mp, strengh, defense) {
-        super(name, level, hp, mp);
+    constructor(name, strengh, defense) {
+        super(name);
         this.strengh = strengh;
         this.defense = defense;
     };

@@ -63,16 +63,16 @@ export class CharacterView {
         </div>
         `;
     
-        /*const containerLevel = personagemLI.querySelector('.level')
+        const containerLevel = personagemLI.querySelector('.level')
         containerLevel.onclick = (evt) => {
             evt.stopPropagation()
     
-            if (evt.target.classList.contains('diminuir-level')) personagem.diminuirLevel()
+            if (evt.target.classList.contains('diminuir-level')) char.diminuirLevel()
     
-            if (evt.target.classList.contains('aumentar-level')) personagem.aumentarLevel()
+            if (evt.target.classList.contains('aumentar-level')) char.aumentarLevel()
     
             this.render()
-        }*/
+        }
     
     
         personagemLI.onclick = () => {

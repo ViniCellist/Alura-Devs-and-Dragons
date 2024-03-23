@@ -8,10 +8,10 @@ export class ArcaneArcher extends Character {
     static job = "ArcaneArcher";
     static description = "Detentor de lanças e flechas mágicas!";
 
-    constructor(name, level, hp, mp, dextery, agility, element, powerLevel, intelligence) {
-        super(name, level, hp, mp)
-        this.sideA = new Archer(name, level, dextery, agility);
-        this.sideM = new Mage(name, level, element, powerLevel, intelligence);
+    constructor(name, dextery, agility, element, powerLevel, intelligence) {
+        super(name)
+        this.sideA = new Archer(name, dextery, agility);
+        this.sideM = new Mage(name, element, powerLevel, intelligence);
     };
 
     obtainBadge() {
